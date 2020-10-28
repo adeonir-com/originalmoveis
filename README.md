@@ -10,9 +10,9 @@
 
 # Original Móvies
 
----
-
 This is a single page with few contact info about [Original Móveis](https://originalmoveis.com.br).
+
+---
 
 ## What is inside of this project?
 
