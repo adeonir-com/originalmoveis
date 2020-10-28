@@ -1,18 +1,14 @@
 <h1 align="center">
-  <img src=".github/assets/logo-gh.svg" atl="React Avançado" />
+  <img src=".github/assets/logo.svg" atl="Original Móveis" width="240" />
 </h1>
 
-<p align="center">
-  <img src=".github/assets/hero-illustration.svg" atl="Um desenvolvedor caminhando e uma tela com código e também escrito a palavra Next.JS" />
-</p>
-
-# NextJS Boilerplate
+# Original Móvies
 
 ---
 
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in the course [React Avançado](https://reactavancado.com.br).
+This is a single page with few contact info about [Original Móveis](https://originalmoveis.com.br).
 
-## What is inside?
+## What is inside of this project?
 
 - [NextJS](https://nextjs.org/)
 - [ReactJS](https://reactjs.org/)
@@ -28,17 +24,7 @@ This is a [Next.js](https://nextjs.org/) boilerplate to be used in the course [R
 
 ## Getting Started
 
-You can use this as a boilerplate:
-
-```bash
-npx create-next-app -e https://github.com/adeonir/nextjs-boilerplate new-project
-
-# or
-
-yarn create next-app -e https://github.com/adeonir/nextjs-boilerplate new-project
-```
-
-Then, run the development server:
+Run the development server:
 
 ```bash
 yarn start
