@@ -1,6 +1,12 @@
-<h1 align="center">
-  <img src=".github/assets/logo.svg" atl="Original Móveis" width="240" />
-</h1>
+<p align="center">
+  <img src=".github/assets/logo.svg" atl="Logo of Original Móveis" width="240" />
+</p>
+
+<p align="center">
+  <img src=".github/assets/preview.png" atl="Site preview of Original Móveis" />
+</p>
+
+---
 
 # Original Móvies
 
