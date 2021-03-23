@@ -33,33 +33,24 @@ module.exports = (plop) => {
         path: '../src/components/{{pascalCase name}}/test.tsx',
         templateFile: 'templates/test.tsx.hbs',
       },
-      {
-        type: 'append',
-        path: '../src/components/index.ts',
-        pattern: /export.*.*\n(?!export)/g,
-        template:
-          "export { {{pascalCase name}} } from './{{pascalCase name}}'\n",
-        separator: '',
-      },
-      {
-        type: 'prettify',
-      },
     ],
   })
 
-  plop.setActionType('prettify', (answers) => {
+  plop.setActionType('lint', (answers) => {
     const srcPath = path.join(__dirname, '../src/')
-    const eslintPath = path.join(__dirname, '../', '.eslintrc.json')
-    const generatorName = plop.getHelper('pascalCase')(answers.name)
-    const generatorFiles = path.join(srcPath, 'components', generatorName, '**')
-
-    execSync(`prettier --write "${generatorFiles}"`)
-    execSync(
-      `eslint ${generatorFiles} --fix --ext .ts,.tsx --config ${eslintPath}`
+    const componentName = plop.getHelper('pascalCase')(answers.name)
+    const componentsFiles = path.join(
+      srcPath,
+      'components',
+      componentName,
+      '**'
     )
 
+    execSync(`prettier --write "${componentsFiles}"`)
+    execSync(`eslint ${componentsFiles} --fix --ext .ts,.tsx`)
+
     return `\n\n ${chalk.bold.green(
-      generatorName
+      componentName
     )} component successfully created!\n`
   })
 }
