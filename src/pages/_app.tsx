@@ -8,7 +8,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Original Móveis | Sob medida</title>
+        <title>Original | Móveis sob medida</title>
         <link rel="shortcut" href="/assets/icon-512.png" />
         <link rel="apple-touch-icon" href="/assets/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -18,7 +18,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <meta
           name="description"
-          content="A Original Móveis produz e instala móveis sob medida de qualidade reconhecida, desde 1987. Consulte nos, que teremos prazer em lhe atender."
+          content="A Original produz e instala móveis sob medida de qualidade reconhecida, desde 1987. Consulte nos, que teremos prazer em lhe atender."
         />
       </Head>
 
