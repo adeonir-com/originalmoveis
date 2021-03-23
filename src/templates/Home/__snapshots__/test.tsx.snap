@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Home /> should render correctly 1`] = `
-.c5 {
+exports[`<Home /> should render the social links 1`] = `
+.c6 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -42,30 +42,38 @@ exports[`<Home /> should render correctly 1`] = `
 
 .c2 {
   color: #4e516b;
-  font-size: 1.3rem;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.c3 {
+  color: #4e516b;
+  font-size: 1.4rem;
   display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2,auto);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 2rem;
 }
 
-.c2 > div:last-child svg {
+.c3 > div:last-child svg {
   width: 2.4rem;
 }
 
-.c3 {
+.c4 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.c3:hover span::before {
+.c4:hover span::before {
   width: 100%;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,16 +84,16 @@ exports[`<Home /> should render correctly 1`] = `
   align-items: center;
 }
 
-.c4 svg {
+.c5 svg {
   margin-right: 0.5rem;
   width: 3rem;
 }
 
-.c4 span {
+.c5 span {
   position: relative;
 }
 
-.c4 span::before {
+.c5 span::before {
   content: '';
   display: block;
   border-top: 0.1rem solid #4e516b;
@@ -97,33 +105,39 @@ exports[`<Home /> should render correctly 1`] = `
   transition: width 0.2s ease-in-out;
 }
 
-.c6 {
+.c7 {
   overflow: hidden;
 }
 
-.c6 img {
+.c7 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@media (min-width:768px) {
+@media (min-width:1170px) {
   .c0 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,50%);
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:1440px) {
+  .c0 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media (min-width:1170px) {
   .c1 {
     padding: 2rem;
   }
 }
 
 @media (min-width:450px) {
-  .c2 {
-    font-size: 1.4rem;
-    grid-template-columns: repeat(2,auto);
+  .c3 {
+    font-size: 1.8rem;
   }
 }
 
@@ -137,21 +151,27 @@ exports[`<Home /> should render correctly 1`] = `
       alt="Original Móveis"
       src="/assets/logo.svg"
     />
-    <hr />
     <div
       class="c2"
     >
+      Salvador do Sul/RS
+    </div>
+    <hr />
+    <div
+      class="c3"
+    >
       <a
-        class="c3"
+        class="c4"
         href="https://www.facebook.com/originalmoveis/"
         target="blank"
       >
         <div
-          class="c4"
+          aria-label="facebook"
+          class="c5"
         >
           <svg
             aria-hidden="true"
-            class="c5"
+            class="c6"
             color="#4267b2"
             fill="currentColor"
             focusable="false"
@@ -168,16 +188,17 @@ exports[`<Home /> should render correctly 1`] = `
         </div>
       </a>
       <a
-        class="c3"
+        class="c4"
         href="https://www.instagram.com/original_moveis_sob_medida/"
         target="blank"
       >
         <div
-          class="c4"
+          aria-label="instagram"
+          class="c5"
         >
           <svg
             aria-hidden="true"
-            class="c5"
+            class="c6"
             color="#c13584"
             fill="currentColor"
             focusable="false"
@@ -202,11 +223,12 @@ exports[`<Home /> should render correctly 1`] = `
         </div>
       </a>
       <div
-        class="c4"
+        aria-label="phone"
+        class="c5"
       >
         <svg
           aria-hidden="true"
-          class="c5"
+          class="c6"
           color="#27ae60"
           fill="currentColor"
           focusable="false"
@@ -220,15 +242,16 @@ exports[`<Home /> should render correctly 1`] = `
         (51) 3638-1443
       </div>
       <a
-        class="c3"
+        class="c4"
         href="mailto:contato@originalmoveis.com.br"
       >
         <div
-          class="c4"
+          aria-label="email"
+          class="c5"
         >
           <svg
             aria-hidden="true"
-            class="c5"
+            class="c6"
             color="#fcaf45"
             fill="currentColor"
             focusable="false"
@@ -247,12 +270,12 @@ exports[`<Home /> should render correctly 1`] = `
     </div>
   </div>
   <div
-    class="c6"
+    class="c7"
   >
     <img
-      alt="Original Móveis"
-      src="https://source.unsplash.com/8DSudktoBMc/960x1080"
+      alt="Móveis sob medida"
+      src="/assets/moveis.jpg"
     />
   </div>
 </div>
-`
+`;

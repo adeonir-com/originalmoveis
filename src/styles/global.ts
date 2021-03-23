@@ -1,18 +1,8 @@
-import {
-  createGlobalStyle,
-  css,
-  DefaultTheme,
-  GlobalStyleComponent,
-} from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
-type GlobalStylesProps = {
-  removeBg?: boolean
-}
+import { theme } from '.'
 
-export const GlobalStyles: GlobalStyleComponent<
-  GlobalStylesProps,
-  DefaultTheme
-> = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     outline: 0;
@@ -25,7 +15,7 @@ export const GlobalStyles: GlobalStyleComponent<
     box-sizing: border-box;
   }
 
-  ${({ theme }) => css`
+  ${() => css`
     html {
       font-size: 62.5%;
       min-width: 320px;
@@ -51,5 +41,5 @@ export const GlobalStyles: GlobalStyleComponent<
     select {
       font: inherit;
     }
-  `};
+  `}
 `

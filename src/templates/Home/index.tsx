@@ -1,22 +1,27 @@
-import { FacebookCircle } from '@styled-icons/boxicons-logos/FacebookCircle'
-import { Instagram } from '@styled-icons/boxicons-logos/Instagram'
-import { Phone } from '@styled-icons/boxicons-solid/Phone'
-import { Email } from '@styled-icons/entypo/Email'
+import {
+  FacebookCircle as Facebook,
+  Instagram,
+} from '@styled-icons/boxicons-logos'
+import { Phone } from '@styled-icons/boxicons-solid'
+import { Email } from '@styled-icons/entypo'
+
 import { theme } from 'styles'
 
 import * as S from './styles'
 
 export const Home = () => (
-  <S.HomeContainer>
+  <S.Container>
     <S.Info>
       <img src="/assets/logo.svg" alt="Original Móveis" />
+
+      <S.Locale>Salvador do Sul/RS</S.Locale>
 
       <hr />
 
       <S.Contact>
         <S.Link href="https://www.facebook.com/originalmoveis/" target="blank">
-          <S.Item>
-            <FacebookCircle color={theme.colors.info} />
+          <S.Item aria-label="facebook">
+            <Facebook color={theme.colors.info} aria-hidden="true" />
             <span>@originalmoveis</span>
           </S.Item>
         </S.Link>
@@ -24,18 +29,18 @@ export const Home = () => (
           href="https://www.instagram.com/original_moveis_sob_medida/"
           target="blank"
         >
-          <S.Item>
-            <Instagram color={theme.colors.news} />
+          <S.Item aria-label="instagram">
+            <Instagram color={theme.colors.news} aria-hidden="true" />
             <span>@original_moveis_sob_medida</span>
           </S.Item>
         </S.Link>
-        <S.Item>
-          <Phone color={theme.colors.success} />
+        <S.Item aria-label="phone">
+          <Phone color={theme.colors.success} aria-hidden="true" />
           (51) 3638-1443
         </S.Item>
         <S.Link href="mailto:contato@originalmoveis.com.br">
-          <S.Item>
-            <Email color={theme.colors.warning} />
+          <S.Item aria-label="email">
+            <Email color={theme.colors.warning} aria-hidden="true" />
             <span>contato@originalmoveis.com.br</span>
           </S.Item>
         </S.Link>
@@ -43,10 +48,7 @@ export const Home = () => (
     </S.Info>
 
     <S.Image>
-      <img
-        src="https://source.unsplash.com/8DSudktoBMc/960x1080"
-        alt="Original Móveis"
-      />
+      <img src="/assets/moveis.jpg" alt="Móveis sob medida" />
     </S.Image>
-  </S.HomeContainer>
+  </S.Container>
 )
