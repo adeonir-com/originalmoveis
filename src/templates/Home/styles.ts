@@ -1,7 +1,14 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
+import { generateMedia } from 'styled-media-query'
 
 import { theme } from 'styles'
+
+const media = generateMedia({
+  huge: '1440px',
+  large: '1170px',
+  medium: '768px',
+  small: '512px',
+})
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -51,10 +58,10 @@ export const Locale = styled.div`
 
 export const Contact = styled.div`
   color: ${theme.colors.darkGray};
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   align-items: center;
 
   > div:last-child {
@@ -64,6 +71,7 @@ export const Contact = styled.div`
   }
 
   ${media.greaterThan('small')`
+    grid-template-columns: repeat(2, auto);
     font-size: 1.8rem;
   `};
 `
